@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Склонность к психосоматике</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    h1 {
+      text-align: center;
+      color: #543c2f;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #876d5e;
+      margin-top: 30px;
+    }
+
+    .question {
+      background: #f9f5f1;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #b6846c;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 30px auto;
+    }
+
+    button:hover {
+      background-color: #9d6e58;
+    }
+
+    .result {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: center;
+      color: #4d2e1f;
+    }
+
+    a {
+      color: #b6846c;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Склонность к психосоматике</h1>
+  <p style="text-align:center">Ваше тело кричит о проблеме?</p>
+
+  <form id="quizForm">
+    <h2>🔹 Эмоции и стресс</h2>
+    <div class="question">1. Вы часто подавляете эмоции (гнев, обиду, печаль), вместо того чтобы проживать их?
+      <label><input type="radio" name="q1" value="yes" /> Да</label>
+      <label><input type="radio" name="q1" value="no" /> Нет</label>
+    </div>
+    <div class="question">2. Вам сложно говорить о своих переживаниях, даже с близкими?
+      <label><input type="radio" name="q2" value="yes" /> Да</label>
+      <label><input type="radio" name="q2" value="no" /> Нет</label>
+    </div>
+    <div class="question">3. После стресса у вас часто появляются физические симптомы (головная боль, тошнота, напряжение, слабость в теле)?
+      <label><input type="radio" name="q3" value="yes" /> Да</label>
+      <label><input type="radio" name="q3" value="no" /> Нет</label>
+    </div>
+    <div class="question">4. Вы чувствуете себя "ответственным за всех", даже когда это истощает?
+      <label><input type="radio" name="q4" value="yes" /> Да</label>
+      <label><input type="radio" name="q4" value="no" /> Нет</label>
+    </div>
+
+    <h2>🔹 Телесные симптомы</h2>
+    <div class="question">5. У вас есть хронические боли, которым врачи не находят явной причины?
+      <label><input type="radio" name="q5" value="yes" /> Да</label>
+      <label><input type="radio" name="q5" value="no" /> Нет</label>
+    </div>
+    <div class="question">6. В моменты тревоги у вас есть физические симптомы: учащается сердцебиение, появляется боль в каком-то месте, одышка или головокружение?
+      <label><input type="radio" name="q6" value="yes" /> Да</label>
+      <label><input type="radio" name="q6" value="no" /> Нет</label>
+    </div>
+    <div class="question">7. Кожа (покраснение, зуд, сыпь, экзема, псориаз) реагирует на стресс?
+      <label><input type="radio" name="q7" value="yes" /> Да</label>
+      <label><input type="radio" name="q7" value="no" /> Нет</label>
+    </div>
+    <div class="question">8. Вы часто болеете (простуда, ангина), когда эмоционально устаете?
+      <label><input type="radio" name="q8" value="yes" /> Да</label>
+      <label><input type="radio" name="q8" value="no" /> Нет</label>
+    </div>
+
+    <h2>🔹 Отношения с собой</h2>
+    <div class="question">9. Вы часто критикуете себя и чувствуете вину за ошибки?
+      <label><input type="radio" name="q9" value="yes" /> Да</label>
+      <label><input type="radio" name="q9" value="no" /> Нет</label>
+    </div>
+    <div class="question">10. Вам трудно отдыхать без чувства вины ("я должна что-то делать")?
+      <label><input type="radio" name="q10" value="yes" /> Да</label>
+      <label><input type="radio" name="q10" value="no" /> Нет</label>
+    </div>
+    <div class="question">11. Вы игнорируете усталость, пока тело не "уложит" вас недомоганием или болезнью?
+      <label><input type="radio" name="q11" value="yes" /> Да</label>
+      <label><input type="radio" name="q11" value="no" /> Нет</label>
+    </div>
+    <div class="question">12. В детстве вас учили, что "жаловаться — стыдно" или "терпеть — нормально"?
+      <label><input type="radio" name="q12" value="yes" /> Да</label>
+      <label><input type="radio" name="q12" value="no" /> Нет</label>
+    </div>
+
+    <h2>🔹 Реакция на конфликты</h2>
+    <div class="question">13. В ссорах вы чаще молчите или соглашаетесь, чтобы избежать скандала?
+      <label><input type="radio" name="q13" value="yes" /> Да</label>
+      <label><input type="radio" name="q13" value="no" /> Нет</label>
+    </div>
+    <div class="question">14. Вы чувствуете ком в горле или сжатые челюсти, когда злитесь, но не выражаете это?
+      <label><input type="radio" name="q14" value="yes" /> Да</label>
+      <label><input type="radio" name="q14" value="no" /> Нет</label>
+    </div>
+    <div class="question">15. Ваше тело "бунтует" (тошнота, диарея) перед важными событиями?
+      <label><input type="radio" name="q15" value="yes" /> Да</label>
+      <label><input type="radio" name="q15" value="no" /> Нет</label>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Узнать результат</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateResult() {
+      let yesCount = 0;
+      for (let i = 1; i <= 15; i++) {
+        const answer = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!answer) {
+          alert("Пожалуйста, ответьте на все вопросы.");
+          return;
+        }
+        if (answer.value === "yes") {
+          yesCount++;
+        }
+      }
+
+      let message = "";
+      if (yesCount <= 4) {
+        message = "✨ 0–4 «Да»: Ваше тело и психика в гармонии. Продолжайте прислушиваться к себе!";
+      } else if (yesCount <= 9) {
+        message = "⚠️ 5–9 «Да»: Тело подаёт сигналы. Пора снижать стресс и учиться выражать эмоции.";
+      } else {
+        message = "🔥 10–15 «Да»: Яркая психосоматика. Рекомендуется работа с психологом и телесные практики (дыхание, массаж, йога).";
+      }
+
+      message += '<br><br>💡 Подробнее: <a href="https://t.me/Uliana_Uliankina" target="_blank">@Uliana_Uliankina</a>';
+      document.getElementById("result").innerHTML = message;
+    }
+  </script>
+</body>
+</html>
