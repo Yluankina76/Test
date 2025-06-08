@@ -71,8 +71,12 @@
       background-color: #004a99;
     }
 
+    button.answer-btn.selected {
+      background-color: #004a99;
+    }
+
     button#submitBtn {
-      display: block;
+      display: none;
       background-color: #0066cc;
       margin: 2rem auto 0 auto;
       padding: 0.7rem 2rem;
@@ -81,6 +85,7 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      display: block;
     }
     button#submitBtn:hover {
       background-color: #004a99;
@@ -140,7 +145,7 @@
 
       // Телесные симптомы
       "У вас есть хронические боли, которым врачи не находят явной причины?",
-      "В моменты тревоги у вас есть физические симптомы: учащается сердцебиение, появляется боль в каком-то месте, одышка или головокружение?",
+      "В моментах тревоги у вас есть физические симптомы: учащается сердцебиение, появляется боль в каком-то месте, одышка или головокружение?",
       "Кожа (покраснение, зуд, сыпь, экзема, псориаз) реагирует на стресс?",
       "Вы часто болеете (простуда, ангина), когда эмоционально устаете?",
 
@@ -161,7 +166,6 @@
     const resultDiv = document.getElementById('result');
     const tgButton = document.getElementById('tgButton');
 
-    // Для хранения ответов: true = Да, false = Нет, null = не выбрано
     const answers = new Array(questions.length).fill(null);
 
     function createQuestion(index) {
@@ -177,7 +181,8 @@
       yesBtn.className = 'answer-btn';
       yesBtn.onclick = () => {
         answers[index] = true;
-        highlightAnswer(div, yesBtn);
+        updateSelection(div, yesBtn);
+        checkAllAnswered();
       };
 
       const noBtn = document.createElement('button');
@@ -185,7 +190,8 @@
       noBtn.className = 'answer-btn';
       noBtn.onclick = () => {
         answers[index] = false;
-        highlightAnswer(div, noBtn);
+        updateSelection(div, noBtn);
+        checkAllAnswered();
       };
 
       div.appendChild(yesBtn);
@@ -194,21 +200,22 @@
       return div;
     }
 
-    function highlightAnswer(questionDiv, selectedBtn) {
-      // Сбросить стили у обеих кнопок
+    function updateSelection(questionDiv, selectedBtn) {
       const buttons = questionDiv.querySelectorAll('button.answer-btn');
       buttons.forEach(btn => {
-        btn.style.backgroundColor = '#0066cc';
+        btn.classList.remove('selected');
       });
-      // Выделить выбранную
-      selectedBtn.style.backgroundColor = '#004a99';
+      selectedBtn.classList.add('selected');
     }
 
-    function showAllQuestions() {
-      quizContainer.innerHTML = '';
-      questions.forEach((q, i) => {
-        quizContainer.appendChild(createQuestion(i));
-      });
+    function checkAllAnswered() {
+      if (!answers.includes(null)) {
+        submitBtn.style.display = 'block';
+      } else {
+        submitBtn.style.display = 'none';
+        resultDiv.textContent = '';
+        tgButton.style.display = 'none';
+      }
     }
 
     function calculateResult() {
@@ -228,12 +235,15 @@
     }
 
     submitBtn.addEventListener('click', () => {
-      if (answers.includes(null)) {
-        alert('Пожалуйста, ответьте на все вопросы перед просмотром результата.');
-        return;
-      }
       calculateResult();
     });
+
+    function showAllQuestions() {
+      quizContainer.innerHTML = '';
+      questions.forEach((q, i) => {
+        quizContainer.appendChild(createQuestion(i));
+      });
+    }
 
     showAllQuestions();
   </script>
