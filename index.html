@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Склонность к психосоматике</title>
+  <title>Склонность к психосоматике. Ваше тело кричит о проблеме?</title>
   <style>
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -88,6 +88,7 @@
     .tg-button {
       text-align: center;
       margin-top: 20px;
+      animation: fadeIn 1s ease-in;
     }
 
     .tg-button a {
@@ -110,103 +111,46 @@
   <h1>Склонность к психосоматике. Ваше тело кричит о проблеме?</h1>
 
   <form id="quizForm">
-    <!-- Questions -->
-    <div class="question"><strong>🔹 Эмоции и стресс</strong></div>
-    <div class="question"><p>1. Вы часто подавляете эмоции (гнев, обиду, печаль), вместо того чтобы проживать их?</p>
-      <div class="answers">
-        <label><input type="radio" name="q1" value="yes">Да</label>
-        <label><input type="radio" name="q1" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>2. Вам сложно говорить о своих переживаниях, даже с близкими?</p>
-      <div class="answers">
-        <label><input type="radio" name="q2" value="yes">Да</label>
-        <label><input type="radio" name="q2" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>3. После стресса у вас часто появляются физические симптомы (головная боль, тошнота, напряжение, слабость в теле)?</p>
-      <div class="answers">
-        <label><input type="radio" name="q3" value="yes">Да</label>
-        <label><input type="radio" name="q3" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>4. Вы чувствуете себя "ответственным за всех", даже когда это истощает?</p>
-      <div class="answers">
-        <label><input type="radio" name="q4" value="yes">Да</label>
-        <label><input type="radio" name="q4" value="no">Нет</label>
-      </div>
+    <div class="question"><h2>🔹 Эмоции и стресс</h2>
+      <p>1. Вы часто подавляете эмоции (гнев, обиду, печаль), вместо того чтобы проживать их?</p>
+      <div class="answers"><label><input type="radio" name="q1" value="yes">Да</label><label><input type="radio" name="q1" value="no">Нет</label></div>
+      <p>2. Вам сложно говорить о своих переживаниях, даже с близкими?</p>
+      <div class="answers"><label><input type="radio" name="q2" value="yes">Да</label><label><input type="radio" name="q2" value="no">Нет</label></div>
+      <p>3. После стресса у вас часто появляются физические симптомы (головная боль, тошнота, напряжение, слабость в теле)?</p>
+      <div class="answers"><label><input type="radio" name="q3" value="yes">Да</label><label><input type="radio" name="q3" value="no">Нет</label></div>
+      <p>4. Вы чувствуете себя "ответственным за всех", даже когда это истощает?</p>
+      <div class="answers"><label><input type="radio" name="q4" value="yes">Да</label><label><input type="radio" name="q4" value="no">Нет</label></div>
     </div>
 
-    <div class="question"><strong>🔹 Телесные симптомы</strong></div>
-    <div class="question"><p>5. У вас есть хронические боли, которым врачи не находят явной причины?</p>
-      <div class="answers">
-        <label><input type="radio" name="q5" value="yes">Да</label>
-        <label><input type="radio" name="q5" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>6. В моменты тревоги у вас есть физические симптомы: учащается сердцебиение, появляется боль в каком-то месте, одышка или головокружение?</p>
-      <div class="answers">
-        <label><input type="radio" name="q6" value="yes">Да</label>
-        <label><input type="radio" name="q6" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>7. Кожа (покраснение, зуд, сыпь, экзема, псориаз) реагирует на стресс?</p>
-      <div class="answers">
-        <label><input type="radio" name="q7" value="yes">Да</label>
-        <label><input type="radio" name="q7" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>8. Вы часто болеете (простуда, ангина), когда эмоционально устаете?</p>
-      <div class="answers">
-        <label><input type="radio" name="q8" value="yes">Да</label>
-        <label><input type="radio" name="q8" value="no">Нет</label>
-      </div>
+    <div class="question"><h2>🔹 Телесные симптомы</h2>
+      <p>5. У вас есть хронические боли, которым врачи не находят явной причины?</p>
+      <div class="answers"><label><input type="radio" name="q5" value="yes">Да</label><label><input type="radio" name="q5" value="no">Нет</label></div>
+      <p>6. В моменты тревоги у вас есть физические симптомы: учащается сердцебиение, появляется боль в каком-то месте, одышка или головокружение?</p>
+      <div class="answers"><label><input type="radio" name="q6" value="yes">Да</label><label><input type="radio" name="q6" value="no">Нет</label></div>
+      <p>7. Кожа (покраснение, зуд, сыпь, экзема, псориаз) реагирует на стресс?</p>
+      <div class="answers"><label><input type="radio" name="q7" value="yes">Да</label><label><input type="radio" name="q7" value="no">Нет</label></div>
+      <p>8. Вы часто болеете (простуда, ангина), когда эмоционально устаете?</p>
+      <div class="answers"><label><input type="radio" name="q8" value="yes">Да</label><label><input type="radio" name="q8" value="no">Нет</label></div>
     </div>
 
-    <div class="question"><strong>🔹 Отношения с собой</strong></div>
-    <div class="question"><p>9. Вы часто критикуете себя и чувствуете вину за ошибки?</p>
-      <div class="answers">
-        <label><input type="radio" name="q9" value="yes">Да</label>
-        <label><input type="radio" name="q9" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>10. Вам трудно отдыхать без чувства вины ("я должна что-то делать")?</p>
-      <div class="answers">
-        <label><input type="radio" name="q10" value="yes">Да</label>
-        <label><input type="radio" name="q10" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>11. Вы игнорируете усталость, пока тело не "уложит" вас недомоганием или болезнью?</p>
-      <div class="answers">
-        <label><input type="radio" name="q11" value="yes">Да</label>
-        <label><input type="radio" name="q11" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>12. В детстве вас учили, что "жаловаться — стыдно" или "терпеть — нормально"?</p>
-      <div class="answers">
-        <label><input type="radio" name="q12" value="yes">Да</label>
-        <label><input type="radio" name="q12" value="no">Нет</label>
-      </div>
+    <div class="question"><h2>🔹 Отношения с собой</h2>
+      <p>9. Вы часто критикуете себя и чувствуете вину за ошибки?</p>
+      <div class="answers"><label><input type="radio" name="q9" value="yes">Да</label><label><input type="radio" name="q9" value="no">Нет</label></div>
+      <p>10. Вам трудно отдыхать без чувства вины ("я должна что-то делать")?</p>
+      <div class="answers"><label><input type="radio" name="q10" value="yes">Да</label><label><input type="radio" name="q10" value="no">Нет</label></div>
+      <p>11. Вы игнорируете усталость, пока тело не "уложит" вас недомоганием или болезнью?</p>
+      <div class="answers"><label><input type="radio" name="q11" value="yes">Да</label><label><input type="radio" name="q11" value="no">Нет</label></div>
+      <p>12. В детстве вас учили, что "жаловаться — стыдно" или "терпеть — нормально"?</p>
+      <div class="answers"><label><input type="radio" name="q12" value="yes">Да</label><label><input type="radio" name="q12" value="no">Нет</label></div>
     </div>
 
-    <div class="question"><strong>🔹 Реакция на конфликты</strong></div>
-    <div class="question"><p>13. В ссорах вы чаще молчите или соглашаетесь, чтобы избежать скандала?</p>
-      <div class="answers">
-        <label><input type="radio" name="q13" value="yes">Да</label>
-        <label><input type="radio" name="q13" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>14. Вы чувствуете ком в горле или сжатые челюсти, когда злитесь, но не выражаете это?</p>
-      <div class="answers">
-        <label><input type="radio" name="q14" value="yes">Да</label>
-        <label><input type="radio" name="q14" value="no">Нет</label>
-      </div>
-    </div>
-    <div class="question"><p>15. Ваше тело "бунтует" (тошнота, диарея) перед важными событиями?</p>
-      <div class="answers">
-        <label><input type="radio" name="q15" value="yes">Да</label>
-        <label><input type="radio" name="q15" value="no">Нет</label>
-      </div>
+    <div class="question"><h2>🔹 Реакция на конфликты</h2>
+      <p>13. В ссорах вы чаще молчите или соглашаетесь, чтобы избежать скандала?</p>
+      <div class="answers"><label><input type="radio" name="q13" value="yes">Да</label><label><input type="radio" name="q13" value="no">Нет</label></div>
+      <p>14. Вы чувствуете ком в горле или сжатые челюсти, когда злитесь, но не выражаете это?</p>
+      <div class="answers"><label><input type="radio" name="q14" value="yes">Да</label><label><input type="radio" name="q14" value="no">Нет</label></div>
+      <p>15. Ваше тело "бунтует" (тошнота, диарея) перед важными событиями?</p>
+      <div class="answers"><label><input type="radio" name="q15" value="yes">Да</label><label><input type="radio" name="q15" value="no">Нет</label></div>
     </div>
 
     <button type="button" onclick="calculateResult()">Узнать результат</button>
@@ -214,8 +158,9 @@
 
   <div class="result" id="result"></div>
 
-  <div class="tg-button">
-    <a href="https://t.me/Uliana_Uliankina" target="_blank">Перейти в Telegram-канал</a>
+  <div class="tg-button" id="tgLink" style="display:none">
+    <p><strong>Что делать?</strong></p>
+    <a href="https://t.me/Uliana_Uliankina" target="_blank">👉 Перейти в Telegram-канал</a>
   </div>
 
   <script>
@@ -242,6 +187,7 @@
       }
 
       document.getElementById("result").innerHTML = message;
+      document.getElementById("tgLink").style.display = "block";
     }
   </script>
 </body>
